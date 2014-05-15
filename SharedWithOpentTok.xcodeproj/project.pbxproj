@@ -1,0 +1,619 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA9298AC1914273600DC2B05 /* TBExamplePublisher.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9298A51914273600DC2B05 /* TBExamplePublisher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CA9298AD1914273600DC2B05 /* TBExampleSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9298A71914273600DC2B05 /* TBExampleSubscriber.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CA9298AE1914273600DC2B05 /* TBExampleVideoCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9298A91914273600DC2B05 /* TBExampleVideoCapture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CA9298AF1914273600DC2B05 /* TBExampleVideoRender.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9298AB1914273600DC2B05 /* TBExampleVideoRender.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CAC2DA82191C46BE00A05488 /* OpenTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC2DA81191C46BE00A05488 /* OpenTok.framework */; };
+		CAD1045118DB9BC40017CE01 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = CAD1045018DB9BC40017CE01 /* README.txt */; };
+		CAECF61718F758F200C897BA /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAECF61618F758F200C897BA /* GLKit.framework */; };
+		CAECF61A18F75A9600C897BA /* LEOGLKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAECF61918F75A9600C897BA /* LEOGLKViewController.m */; };
+		CAECF61D18F764D700C897BA /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAECF61C18F764D700C897BA /* PageViewController.m */; };
+		CAF1223E18DAC558006DB9AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF1223D18DAC558006DB9AF /* Foundation.framework */; };
+		CAF1224018DAC558006DB9AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF1223F18DAC558006DB9AF /* CoreGraphics.framework */; };
+		CAF1224218DAC558006DB9AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF1224118DAC558006DB9AF /* UIKit.framework */; };
+		CAF1224818DAC558006DB9AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAF1224618DAC558006DB9AF /* InfoPlist.strings */; };
+		CAF1224A18DAC558006DB9AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF1224918DAC558006DB9AF /* main.m */; };
+		CAF1224E18DAC559006DB9AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF1224D18DAC559006DB9AF /* AppDelegate.m */; };
+		CAF1225118DAC559006DB9AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAF1224F18DAC559006DB9AF /* Main.storyboard */; };
+		CAF1225418DAC559006DB9AF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF1225318DAC559006DB9AF /* ViewController.m */; };
+		CAF1225618DAC559006DB9AF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAF1225518DAC559006DB9AF /* Images.xcassets */; };
+		CAF1225D18DAC559006DB9AF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF1225C18DAC559006DB9AF /* XCTest.framework */; };
+		CAF1225E18DAC559006DB9AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF1223D18DAC558006DB9AF /* Foundation.framework */; };
+		CAF1225F18DAC559006DB9AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF1224118DAC558006DB9AF /* UIKit.framework */; };
+		CAF1227318DAC5DD006DB9AF /* LEOVideochatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAF1227218DAC5DD006DB9AF /* LEOVideochatViewController.xib */; };
+		CAF1229618DAC6D1006DB9AF /* LEOOpenTokService.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF1227418DAC6D1006DB9AF /* LEOOpenTokService.m */; };
+		CAF1229718DAC6D1006DB9AF /* LEOVideochatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF1227518DAC6D1006DB9AF /* LEOVideochatViewController.m */; };
+		CAF1229818DAC6D1006DB9AF /* ShaderUtilities.c in Sources */ = {isa = PBXBuildFile; fileRef = CAF1228C18DAC6D1006DB9AF /* ShaderUtilities.c */; };
+		CAF122A018DACB24006DB9AF /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF1229F18DACB24006DB9AF /* libxml2.dylib */; };
+		CAF122A218DACB34006DB9AF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF122A118DACB34006DB9AF /* libsqlite3.dylib */; };
+		CAF122A418DACB45006DB9AF /* libpthread.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF122A318DACB45006DB9AF /* libpthread.dylib */; };
+		CAF122A618DACB57006DB9AF /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF122A518DACB57006DB9AF /* libstdc++.6.0.9.dylib */; };
+		CAF122A818DACC40006DB9AF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF122A718DACC40006DB9AF /* SystemConfiguration.framework */; };
+		CAF122AA18DACC5E006DB9AF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAF122A918DACC5E006DB9AF /* CoreTelephony.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAF1226018DAC559006DB9AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CAF1223218DAC558006DB9AF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAF1223918DAC558006DB9AF;
+			remoteInfo = SharedWithOpentTok;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CA9298A41914273600DC2B05 /* TBExamplePublisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBExamplePublisher.h; sourceTree = "<group>"; };
+		CA9298A51914273600DC2B05 /* TBExamplePublisher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBExamplePublisher.m; sourceTree = "<group>"; };
+		CA9298A61914273600DC2B05 /* TBExampleSubscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBExampleSubscriber.h; sourceTree = "<group>"; };
+		CA9298A71914273600DC2B05 /* TBExampleSubscriber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBExampleSubscriber.m; sourceTree = "<group>"; };
+		CA9298A81914273600DC2B05 /* TBExampleVideoCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBExampleVideoCapture.h; sourceTree = "<group>"; };
+		CA9298A91914273600DC2B05 /* TBExampleVideoCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBExampleVideoCapture.m; sourceTree = "<group>"; };
+		CA9298AA1914273600DC2B05 /* TBExampleVideoRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBExampleVideoRender.h; sourceTree = "<group>"; };
+		CA9298AB1914273600DC2B05 /* TBExampleVideoRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBExampleVideoRender.m; sourceTree = "<group>"; };
+		CAC2DA81191C46BE00A05488 /* OpenTok.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenTok.framework; sourceTree = "<group>"; };
+		CAD1045018DB9BC40017CE01 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		CAECF61618F758F200C897BA /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		CAECF61818F75A9600C897BA /* LEOGLKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOGLKViewController.h; sourceTree = "<group>"; };
+		CAECF61918F75A9600C897BA /* LEOGLKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOGLKViewController.m; sourceTree = "<group>"; };
+		CAECF61B18F764D700C897BA /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		CAECF61C18F764D700C897BA /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
+		CAF1223A18DAC558006DB9AF /* SharedWithOpentTok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SharedWithOpentTok.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF1223D18DAC558006DB9AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CAF1223F18DAC558006DB9AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CAF1224118DAC558006DB9AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CAF1224518DAC558006DB9AF /* SharedWithOpentTok-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SharedWithOpentTok-Info.plist"; sourceTree = "<group>"; };
+		CAF1224718DAC558006DB9AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CAF1224918DAC558006DB9AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CAF1224B18DAC558006DB9AF /* SharedWithOpentTok-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SharedWithOpentTok-Prefix.pch"; sourceTree = "<group>"; };
+		CAF1224C18DAC558006DB9AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CAF1224D18DAC559006DB9AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CAF1225018DAC559006DB9AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAF1225218DAC559006DB9AF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CAF1225318DAC559006DB9AF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CAF1225518DAC559006DB9AF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CAF1225B18DAC559006DB9AF /* SharedWithOpentTokTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedWithOpentTokTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAF1225C18DAC559006DB9AF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CAF1227218DAC5DD006DB9AF /* LEOVideochatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LEOVideochatViewController.xib; sourceTree = "<group>"; };
+		CAF1227418DAC6D1006DB9AF /* LEOOpenTokService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOOpenTokService.m; sourceTree = "<group>"; };
+		CAF1227518DAC6D1006DB9AF /* LEOVideochatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEOVideochatViewController.m; sourceTree = "<group>"; };
+		CAF1227618DAC6D1006DB9AF /* LEOVideochatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOVideochatViewController.h; sourceTree = "<group>"; };
+		CAF1227718DAC6D1006DB9AF /* LEOOpenTokService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEOOpenTokService.h; sourceTree = "<group>"; };
+		CAF1227918DAC6D1006DB9AF /* basic_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = basic_types.h; sourceTree = "<group>"; };
+		CAF1227A18DAC6D1006DB9AF /* compare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compare.h; sourceTree = "<group>"; };
+		CAF1227B18DAC6D1006DB9AF /* convert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert.h; sourceTree = "<group>"; };
+		CAF1227C18DAC6D1006DB9AF /* convert_argb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert_argb.h; sourceTree = "<group>"; };
+		CAF1227D18DAC6D1006DB9AF /* convert_from.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert_from.h; sourceTree = "<group>"; };
+		CAF1227E18DAC6D1006DB9AF /* convert_from_argb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = convert_from_argb.h; sourceTree = "<group>"; };
+		CAF1227F18DAC6D1006DB9AF /* cpu_id.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cpu_id.h; sourceTree = "<group>"; };
+		CAF1228018DAC6D1006DB9AF /* format_conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = format_conversion.h; sourceTree = "<group>"; };
+		CAF1228118DAC6D1006DB9AF /* mjpeg_decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mjpeg_decoder.h; sourceTree = "<group>"; };
+		CAF1228218DAC6D1006DB9AF /* planar_functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = planar_functions.h; sourceTree = "<group>"; };
+		CAF1228318DAC6D1006DB9AF /* rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rotate.h; sourceTree = "<group>"; };
+		CAF1228418DAC6D1006DB9AF /* rotate_argb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rotate_argb.h; sourceTree = "<group>"; };
+		CAF1228518DAC6D1006DB9AF /* row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = row.h; sourceTree = "<group>"; };
+		CAF1228618DAC6D1006DB9AF /* scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scale.h; sourceTree = "<group>"; };
+		CAF1228718DAC6D1006DB9AF /* scale_argb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scale_argb.h; sourceTree = "<group>"; };
+		CAF1228818DAC6D1006DB9AF /* scale_row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scale_row.h; sourceTree = "<group>"; };
+		CAF1228918DAC6D1006DB9AF /* version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version.h; sourceTree = "<group>"; };
+		CAF1228A18DAC6D1006DB9AF /* video_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = video_common.h; sourceTree = "<group>"; };
+		CAF1228B18DAC6D1006DB9AF /* libyuv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libyuv.h; sourceTree = "<group>"; };
+		CAF1228C18DAC6D1006DB9AF /* ShaderUtilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ShaderUtilities.c; sourceTree = "<group>"; };
+		CAF1228D18DAC6D1006DB9AF /* ShaderUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderUtilities.h; sourceTree = "<group>"; };
+		CAF1229F18DACB24006DB9AF /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		CAF122A118DACB34006DB9AF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		CAF122A318DACB45006DB9AF /* libpthread.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpthread.dylib; path = usr/lib/libpthread.dylib; sourceTree = SDKROOT; };
+		CAF122A518DACB57006DB9AF /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
+		CAF122A718DACC40006DB9AF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CAF122A918DACC5E006DB9AF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAF1223718DAC558006DB9AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAECF61718F758F200C897BA /* GLKit.framework in Frameworks */,
+				CAF122AA18DACC5E006DB9AF /* CoreTelephony.framework in Frameworks */,
+				CAF122A818DACC40006DB9AF /* SystemConfiguration.framework in Frameworks */,
+				CAF122A618DACB57006DB9AF /* libstdc++.6.0.9.dylib in Frameworks */,
+				CAF122A418DACB45006DB9AF /* libpthread.dylib in Frameworks */,
+				CAF122A218DACB34006DB9AF /* libsqlite3.dylib in Frameworks */,
+				CAF122A018DACB24006DB9AF /* libxml2.dylib in Frameworks */,
+				CAF1224018DAC558006DB9AF /* CoreGraphics.framework in Frameworks */,
+				CAF1224218DAC558006DB9AF /* UIKit.framework in Frameworks */,
+				CAF1223E18DAC558006DB9AF /* Foundation.framework in Frameworks */,
+				CAC2DA82191C46BE00A05488 /* OpenTok.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAF1225818DAC559006DB9AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF1225D18DAC559006DB9AF /* XCTest.framework in Frameworks */,
+				CAF1225F18DAC559006DB9AF /* UIKit.framework in Frameworks */,
+				CAF1225E18DAC559006DB9AF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CAF1223118DAC558006DB9AF = {
+			isa = PBXGroup;
+			children = (
+				CAF1224318DAC558006DB9AF /* SharedWithOpentTok */,
+				CAF1223C18DAC558006DB9AF /* Frameworks */,
+				CAF1223B18DAC558006DB9AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CAF1223B18DAC558006DB9AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAF1223A18DAC558006DB9AF /* SharedWithOpentTok.app */,
+				CAF1225B18DAC559006DB9AF /* SharedWithOpentTokTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAF1223C18DAC558006DB9AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAC2DA81191C46BE00A05488 /* OpenTok.framework */,
+				CAECF61618F758F200C897BA /* GLKit.framework */,
+				CAF122A918DACC5E006DB9AF /* CoreTelephony.framework */,
+				CAF122A718DACC40006DB9AF /* SystemConfiguration.framework */,
+				CAF122A518DACB57006DB9AF /* libstdc++.6.0.9.dylib */,
+				CAF122A318DACB45006DB9AF /* libpthread.dylib */,
+				CAF122A118DACB34006DB9AF /* libsqlite3.dylib */,
+				CAF1229F18DACB24006DB9AF /* libxml2.dylib */,
+				CAF1223D18DAC558006DB9AF /* Foundation.framework */,
+				CAF1223F18DAC558006DB9AF /* CoreGraphics.framework */,
+				CAF1224118DAC558006DB9AF /* UIKit.framework */,
+				CAF1225C18DAC559006DB9AF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAF1224318DAC558006DB9AF /* SharedWithOpentTok */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1045018DB9BC40017CE01 /* README.txt */,
+				CAF1224F18DAC559006DB9AF /* Main.storyboard */,
+				CAF1224C18DAC558006DB9AF /* AppDelegate.h */,
+				CAF1224D18DAC559006DB9AF /* AppDelegate.m */,
+				CAF1225218DAC559006DB9AF /* ViewController.h */,
+				CAF1225318DAC559006DB9AF /* ViewController.m */,
+				CAECF61B18F764D700C897BA /* PageViewController.h */,
+				CAECF61C18F764D700C897BA /* PageViewController.m */,
+				CAF1227618DAC6D1006DB9AF /* LEOVideochatViewController.h */,
+				CAF1227518DAC6D1006DB9AF /* LEOVideochatViewController.m */,
+				CAECF61818F75A9600C897BA /* LEOGLKViewController.h */,
+				CAECF61918F75A9600C897BA /* LEOGLKViewController.m */,
+				CAF1227218DAC5DD006DB9AF /* LEOVideochatViewController.xib */,
+				CAF122AC18DB5733006DB9AF /* DaVinciProductionCode */,
+				CAF122AB18DAD0E3006DB9AF /* OpenTokExampleCode */,
+				CAF1225518DAC559006DB9AF /* Images.xcassets */,
+				CAF1224418DAC558006DB9AF /* Supporting Files */,
+			);
+			path = SharedWithOpentTok;
+			sourceTree = "<group>";
+		};
+		CAF1224418DAC558006DB9AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAF1224518DAC558006DB9AF /* SharedWithOpentTok-Info.plist */,
+				CAF1224618DAC558006DB9AF /* InfoPlist.strings */,
+				CAF1224918DAC558006DB9AF /* main.m */,
+				CAF1224B18DAC558006DB9AF /* SharedWithOpentTok-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CAF1227818DAC6D1006DB9AF /* libyuv */ = {
+			isa = PBXGroup;
+			children = (
+				CAF1227918DAC6D1006DB9AF /* basic_types.h */,
+				CAF1227A18DAC6D1006DB9AF /* compare.h */,
+				CAF1227B18DAC6D1006DB9AF /* convert.h */,
+				CAF1227C18DAC6D1006DB9AF /* convert_argb.h */,
+				CAF1227D18DAC6D1006DB9AF /* convert_from.h */,
+				CAF1227E18DAC6D1006DB9AF /* convert_from_argb.h */,
+				CAF1227F18DAC6D1006DB9AF /* cpu_id.h */,
+				CAF1228018DAC6D1006DB9AF /* format_conversion.h */,
+				CAF1228118DAC6D1006DB9AF /* mjpeg_decoder.h */,
+				CAF1228218DAC6D1006DB9AF /* planar_functions.h */,
+				CAF1228318DAC6D1006DB9AF /* rotate.h */,
+				CAF1228418DAC6D1006DB9AF /* rotate_argb.h */,
+				CAF1228518DAC6D1006DB9AF /* row.h */,
+				CAF1228618DAC6D1006DB9AF /* scale.h */,
+				CAF1228718DAC6D1006DB9AF /* scale_argb.h */,
+				CAF1228818DAC6D1006DB9AF /* scale_row.h */,
+				CAF1228918DAC6D1006DB9AF /* version.h */,
+				CAF1228A18DAC6D1006DB9AF /* video_common.h */,
+			);
+			path = libyuv;
+			sourceTree = "<group>";
+		};
+		CAF122AB18DAD0E3006DB9AF /* OpenTokExampleCode */ = {
+			isa = PBXGroup;
+			children = (
+				CA9298A41914273600DC2B05 /* TBExamplePublisher.h */,
+				CA9298A51914273600DC2B05 /* TBExamplePublisher.m */,
+				CA9298A61914273600DC2B05 /* TBExampleSubscriber.h */,
+				CA9298A71914273600DC2B05 /* TBExampleSubscriber.m */,
+				CA9298A81914273600DC2B05 /* TBExampleVideoCapture.h */,
+				CA9298A91914273600DC2B05 /* TBExampleVideoCapture.m */,
+				CA9298AA1914273600DC2B05 /* TBExampleVideoRender.h */,
+				CA9298AB1914273600DC2B05 /* TBExampleVideoRender.m */,
+				CAF1227818DAC6D1006DB9AF /* libyuv */,
+				CAF1228B18DAC6D1006DB9AF /* libyuv.h */,
+				CAF1228C18DAC6D1006DB9AF /* ShaderUtilities.c */,
+				CAF1228D18DAC6D1006DB9AF /* ShaderUtilities.h */,
+			);
+			name = OpenTokExampleCode;
+			sourceTree = "<group>";
+		};
+		CAF122AC18DB5733006DB9AF /* DaVinciProductionCode */ = {
+			isa = PBXGroup;
+			children = (
+				CAF1227718DAC6D1006DB9AF /* LEOOpenTokService.h */,
+				CAF1227418DAC6D1006DB9AF /* LEOOpenTokService.m */,
+			);
+			name = DaVinciProductionCode;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAF1223918DAC558006DB9AF /* SharedWithOpentTok */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAF1226C18DAC559006DB9AF /* Build configuration list for PBXNativeTarget "SharedWithOpentTok" */;
+			buildPhases = (
+				CAF1223618DAC558006DB9AF /* Sources */,
+				CAF1223718DAC558006DB9AF /* Frameworks */,
+				CAF1223818DAC558006DB9AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SharedWithOpentTok;
+			productName = SharedWithOpentTok;
+			productReference = CAF1223A18DAC558006DB9AF /* SharedWithOpentTok.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CAF1225A18DAC559006DB9AF /* SharedWithOpentTokTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAF1226F18DAC559006DB9AF /* Build configuration list for PBXNativeTarget "SharedWithOpentTokTests" */;
+			buildPhases = (
+				CAF1225718DAC559006DB9AF /* Sources */,
+				CAF1225818DAC559006DB9AF /* Frameworks */,
+				CAF1225918DAC559006DB9AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CAF1226118DAC559006DB9AF /* PBXTargetDependency */,
+			);
+			name = SharedWithOpentTokTests;
+			productName = SharedWithOpentTokTests;
+			productReference = CAF1225B18DAC559006DB9AF /* SharedWithOpentTokTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAF1223218DAC558006DB9AF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Gilles Dezeustre";
+				TargetAttributes = {
+					CAF1223918DAC558006DB9AF = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					CAF1225A18DAC559006DB9AF = {
+						TestTargetID = CAF1223918DAC558006DB9AF;
+					};
+				};
+			};
+			buildConfigurationList = CAF1223518DAC558006DB9AF /* Build configuration list for PBXProject "SharedWithOpentTok" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CAF1223118DAC558006DB9AF;
+			productRefGroup = CAF1223B18DAC558006DB9AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAF1223918DAC558006DB9AF /* SharedWithOpentTok */,
+				CAF1225A18DAC559006DB9AF /* SharedWithOpentTokTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAF1223818DAC558006DB9AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF1225618DAC559006DB9AF /* Images.xcassets in Resources */,
+				CAF1227318DAC5DD006DB9AF /* LEOVideochatViewController.xib in Resources */,
+				CAF1224818DAC558006DB9AF /* InfoPlist.strings in Resources */,
+				CAF1225118DAC559006DB9AF /* Main.storyboard in Resources */,
+				CAD1045118DB9BC40017CE01 /* README.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAF1225918DAC559006DB9AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAF1223618DAC558006DB9AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAF1225418DAC559006DB9AF /* ViewController.m in Sources */,
+				CAF1224E18DAC559006DB9AF /* AppDelegate.m in Sources */,
+				CA9298AF1914273600DC2B05 /* TBExampleVideoRender.m in Sources */,
+				CAF1224A18DAC558006DB9AF /* main.m in Sources */,
+				CAF1229718DAC6D1006DB9AF /* LEOVideochatViewController.m in Sources */,
+				CAF1229618DAC6D1006DB9AF /* LEOOpenTokService.m in Sources */,
+				CAECF61A18F75A9600C897BA /* LEOGLKViewController.m in Sources */,
+				CA9298AD1914273600DC2B05 /* TBExampleSubscriber.m in Sources */,
+				CAF1229818DAC6D1006DB9AF /* ShaderUtilities.c in Sources */,
+				CA9298AE1914273600DC2B05 /* TBExampleVideoCapture.m in Sources */,
+				CA9298AC1914273600DC2B05 /* TBExamplePublisher.m in Sources */,
+				CAECF61D18F764D700C897BA /* PageViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAF1225718DAC559006DB9AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAF1226118DAC559006DB9AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAF1223918DAC558006DB9AF /* SharedWithOpentTok */;
+			targetProxy = CAF1226018DAC559006DB9AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CAF1224618DAC558006DB9AF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAF1224718DAC558006DB9AF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CAF1224F18DAC559006DB9AF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAF1225018DAC559006DB9AF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAF1226A18DAC559006DB9AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CAF1226B18DAC559006DB9AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CAF1226D18DAC559006DB9AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/gilles/dev/SharedWithOpentTok,
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SharedWithOpentTok/SharedWithOpentTok-Prefix.pch";
+				INFOPLIST_FILE = "SharedWithOpentTok/SharedWithOpentTok-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = armv7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CAF1226E18DAC559006DB9AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/gilles/dev/SharedWithOpentTok,
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SharedWithOpentTok/SharedWithOpentTok-Prefix.pch";
+				INFOPLIST_FILE = "SharedWithOpentTok/SharedWithOpentTok-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALID_ARCHS = armv7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CAF1227018DAC559006DB9AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SharedWithOpentTok.app/SharedWithOpentTok";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SharedWithOpentTok/SharedWithOpentTok-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SharedWithOpentTokTests/SharedWithOpentTokTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CAF1227118DAC559006DB9AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SharedWithOpentTok.app/SharedWithOpentTok";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SharedWithOpentTok/SharedWithOpentTok-Prefix.pch";
+				INFOPLIST_FILE = "SharedWithOpentTokTests/SharedWithOpentTokTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAF1223518DAC558006DB9AF /* Build configuration list for PBXProject "SharedWithOpentTok" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAF1226A18DAC559006DB9AF /* Debug */,
+				CAF1226B18DAC559006DB9AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAF1226C18DAC559006DB9AF /* Build configuration list for PBXNativeTarget "SharedWithOpentTok" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAF1226D18DAC559006DB9AF /* Debug */,
+				CAF1226E18DAC559006DB9AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAF1226F18DAC559006DB9AF /* Build configuration list for PBXNativeTarget "SharedWithOpentTokTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAF1227018DAC559006DB9AF /* Debug */,
+				CAF1227118DAC559006DB9AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAF1223218DAC558006DB9AF /* Project object */;
+}

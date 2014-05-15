@@ -1,0 +1,1 @@
+Issue occured using 2 devices, waiting for both to subscribe to one another, one device start showing buggy subscriber video data (screenshot) for a few seconds then recovers.

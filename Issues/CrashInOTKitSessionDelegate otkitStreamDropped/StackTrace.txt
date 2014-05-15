@@ -1,0 +1,32 @@
+#0	0x38f6e1f0 in __pthread_kill ()
+#1	0x38fd8796 in pthread_kill ()
+#2	0x38f1efdc in abort ()
+#3	0x3824dcd6 in abort_message ()
+#4	0x382666e4 in default_terminate_handler() ()
+#5	0x389abf64 in _objc_terminate() ()
+#6	0x382641c6 in std::__terminate(void (*)()) ()
+#7	0x38263a1c in __cxa_throw ()
+#8	0x389abda2 in objc_exception_throw ()
+#9	0x2e1b47d4 in -[__NSDictionaryM removeObjectForKey:] ()
+#10	0x000e5232 in -[OTKitSessionDelegate otkitStreamDropped:] at /Users/tokbox/jenkins/workspace/otkit-ios-sdk/otkit-objc/OTKitSessionDelegate.m:141
+#11	0x000e6d9c in otkit_session_on_stream_dropped at /Users/tokbox/jenkins/workspace/otkit-ios-sdk/otkit-objc/OTKitSessionDelegate.m:350
+#12	0x00111484 in ot_session_messenger_v2_on_drop_stream___ot at /Users/tokbox/jenkins/workspace/native-sdk/arch/armv7/platform/ios/src/ot_session_v2.c:1066
+#13	0x000f8f76 in ot_messenger_v2_on_deleted_message at /Users/tokbox/jenkins/workspace/native-sdk/arch/armv7/platform/ios/src/ot_messenger_v2.c:391
+#14	0x000f7c1a in ot_messenger_v2_on_rumor_message at /Users/tokbox/jenkins/workspace/native-sdk/arch/armv7/platform/ios/src/ot_messenger_v2.c:939
+#15	0x000f776e in ot_messenger_v2_on_rumor_msg at /Users/tokbox/jenkins/workspace/native-sdk/arch/armv7/platform/ios/src/ot_messenger_v2.c:1103
+#16	0x00128e9c in ot_rumor_v1_msg_parse at /Users/tokbox/jenkins/workspace/native-sdk/arch/armv7/platform/ios/src/rumor_message_v1.c:644
+#17	0x00127a48 in ot_rumor_v1_client_on_data at /Users/tokbox/jenkins/workspace/native-sdk/arch/armv7/platform/ios/src/rumor_client_v1.c:246
+#18	0x000f922c in ot_messenger_v2_on_rumor_recv_data_impl at /Users/tokbox/jenkins/workspace/native-sdk/arch/armv7/platform/ios/src/ot_messenger_v2.c:1320
+#19	0x000f7124 in ot_messenger_v2_on_rumor_recv_binary_data_ws at /Users/tokbox/jenkins/workspace/native-sdk/arch/armv7/platform/ios/src/ot_messenger_v2.c:1342
+#20	0x00121f18 in ot_ws_wslay_on_msg_receive_callback at /Users/tokbox/jenkins/workspace/native-sdk/arch/armv7/platform/ios/src/ot_ws.c:1222
+#21	0x00471256 in wslay_event_recv ()
+#22	0x0011f3ec in ot_ws_on_readable at /Users/tokbox/jenkins/workspace/native-sdk/arch/armv7/platform/ios/src/ot_ws.c:751
+#23	0x000eefd0 in ot_ev_io_callback at /Users/tokbox/jenkins/workspace/native-sdk/arch/armv7/platform/ios/src/ot_ev.c:124
+#24	0x00187b46 in ev_invoke_pending ()
+#25	0x00187fc2 in ev_run ()
+#26	0x000ef9c6 in ev_loop at /Users/tokbox/jenkins/workspace/native-sdk/arch/armv7/platform/ios/platforms/ios_armv7/include/ev.h:826
+#27	0x000ef9a8 in ot_ev_start at /Users/tokbox/jenkins/workspace/native-sdk/arch/armv7/platform/ios/src/ot_ev.c:790
+#28	0x000e6ff6 in otkit_session_start_thread at /Users/tokbox/jenkins/workspace/otkit-ios-sdk/otkit-objc/OTKitSessionDelegate.m:420
+#29	0x38fd7918 in _pthread_body ()
+#30	0x38fd788a in _pthread_start ()
+#31	0x38fd5aa4 in thread_start ()

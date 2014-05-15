@@ -1,0 +1,6 @@
+Crash occured using 2 devices, waiting for both to subscribe to one another, session failed, so ended call on both devices, started video session again, both devices subscribe properly to one another, then for no apparent reason, crash.
+
+This happened a second time a new app session, during call establishment.
+
+This crash is by far the most common I am running into, I would estimate that I run into it even 4 or 5 sessions.
+

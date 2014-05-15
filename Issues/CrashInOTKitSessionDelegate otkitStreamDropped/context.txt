@@ -1,0 +1,1 @@
+Crash occured using 2 devices, waiting for both to subscribe to one another, then disconnect/reconnecting one device, then for no apparent reason, crash.
