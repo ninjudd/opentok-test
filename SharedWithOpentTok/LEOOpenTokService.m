@@ -93,26 +93,32 @@
 }
 
 - (void)manualConnect {
+  NSLog(@"%s", __PRETTY_FUNCTION__);
   [self doConnect:@"manualConnect"];
 }
 
 - (void)manualDisconnect {
+  NSLog(@"%s", __PRETTY_FUNCTION__);
   [self doDisconnectWithCompletion:nil :@"manualDisconnect"];
 }
 
 - (void)manualPublish {
+  NSLog(@"%s", __PRETTY_FUNCTION__);
   [self doPublish:@"manualPublish"];
 }
 
 - (void)manualUnpublish {
+  NSLog(@"%s", __PRETTY_FUNCTION__);
   [self doUnpublishWithCompletion:nil :@"manualUnpublish"];
 }
 
 - (void)manualSubscribe {
+  NSLog(@"%s", __PRETTY_FUNCTION__);
   [self subscribeToFirstValidStreamFound:@"manualSubscribe"];
 }
 
 - (void)manualUnsubscribe {
+  NSLog(@"%s", __PRETTY_FUNCTION__);
   [self doUnsubscribeWithCompletion:nil :@"manualUnsubscribe"];
 }
 
@@ -269,7 +275,7 @@
     [self.session unsubscribe:_subscriber error:&error];
     if (error) {
       NSLog(@"%s unsubscribe error: %@", __PRETTY_FUNCTION__, error);
-      // Closing a publisher is hopefully a blocking immediate action, because I don't
+      // Closing a subscriber is hopefully a blocking immediate action, because I don't
       // get any notification of its completion afaik.
       if (completion)
         completion(NO);
