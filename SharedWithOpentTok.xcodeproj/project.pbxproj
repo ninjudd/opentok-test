@@ -11,6 +11,7 @@
 		CA9298AD1914273600DC2B05 /* TBExampleSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9298A71914273600DC2B05 /* TBExampleSubscriber.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CA9298AE1914273600DC2B05 /* TBExampleVideoCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9298A91914273600DC2B05 /* TBExampleVideoCapture.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CA9298AF1914273600DC2B05 /* TBExampleVideoRender.m in Sources */ = {isa = PBXBuildFile; fileRef = CA9298AB1914273600DC2B05 /* TBExampleVideoRender.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CAC14D2C192EE41200E4A28C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CAC14D2B192EE41200E4A28C /* Reachability.m */; };
 		CAC2DA82191C46BE00A05488 /* OpenTok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC2DA81191C46BE00A05488 /* OpenTok.framework */; };
 		CAD1045118DB9BC40017CE01 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = CAD1045018DB9BC40017CE01 /* README.txt */; };
 		CAECF61718F758F200C897BA /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAECF61618F758F200C897BA /* GLKit.framework */; };
@@ -59,6 +60,8 @@
 		CA9298A91914273600DC2B05 /* TBExampleVideoCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBExampleVideoCapture.m; sourceTree = "<group>"; };
 		CA9298AA1914273600DC2B05 /* TBExampleVideoRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBExampleVideoRender.h; sourceTree = "<group>"; };
 		CA9298AB1914273600DC2B05 /* TBExampleVideoRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBExampleVideoRender.m; sourceTree = "<group>"; };
+		CAC14D2A192EE41200E4A28C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		CAC14D2B192EE41200E4A28C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		CAC2DA81191C46BE00A05488 /* OpenTok.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenTok.framework; sourceTree = "<group>"; };
 		CAD1045018DB9BC40017CE01 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		CAECF61618F758F200C897BA /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -188,6 +191,8 @@
 		CAF1224318DAC558006DB9AF /* SharedWithOpentTok */ = {
 			isa = PBXGroup;
 			children = (
+				CAC14D2A192EE41200E4A28C /* Reachability.h */,
+				CAC14D2B192EE41200E4A28C /* Reachability.m */,
 				CAD1045018DB9BC40017CE01 /* README.txt */,
 				CAF1224F18DAC559006DB9AF /* Main.storyboard */,
 				CAF1224C18DAC558006DB9AF /* AppDelegate.h */,
@@ -378,6 +383,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAC14D2C192EE41200E4A28C /* Reachability.m in Sources */,
 				CAF1225418DAC559006DB9AF /* ViewController.m in Sources */,
 				CAF1224E18DAC559006DB9AF /* AppDelegate.m in Sources */,
 				CA9298AF1914273600DC2B05 /* TBExampleVideoRender.m in Sources */,

@@ -11,6 +11,7 @@
 #import "LEOVideochatViewController.h"
 #import "LEOGLKViewController.h"
 #import "LEOOpenTokService.h"
+#import "Reachability.h"
 
 static NSString* const kApiKey    = @"";
 static NSString* const kSessionId = @"";
@@ -19,6 +20,9 @@ static NSString* const kToken2 = @"";
 
 @interface ViewController () <LEOVideochatViewControllerDelegate>
 @property (strong, nonatomic) NSString *token;
+@property (nonatomic) Reachability *hostReachability;
+@property (nonatomic) Reachability *internetReachability;
+@property (nonatomic) Reachability *wifiReachability;
 @end
 
 
@@ -26,7 +30,21 @@ static NSString* const kToken2 = @"";
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+
+  // Observe the kNetworkReachabilityChangedNotification. When that notification is posted, the method reachabilityChanged will be called.
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+  //Change the host name here to change the server you want to monitor.
   
+  NSString *remoteHostName = @"www.apple.com";
+	self.hostReachability = [Reachability reachabilityWithHostName:remoteHostName];
+	[self.hostReachability startNotifier];
+  
+  self.internetReachability = [Reachability reachabilityForInternetConnection];
+	[self.internetReachability startNotifier];
+  
+  self.wifiReachability = [Reachability reachabilityForLocalWiFi];
+	[self.wifiReachability startNotifier];
+
   if ([kToken1 length] == 0) {
     self.startChatButton.enabled = NO;
     self.tokenChooser.enabled = NO;
@@ -43,6 +61,15 @@ static NSString* const kToken2 = @"";
     self.tokenChooser.enabled = NO;
     [[LEOOpenTokService sharedInstance] setSubscribeToSelf:YES];
   }
+}
+
+/*!
+ * Called by Reachability whenever status changes.
+ */
+- (void) reachabilityChanged:(NSNotification *)note {
+	Reachability* curReach = [note object];
+	NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+  [curReach currentReachabilityStatus];
 }
 
 - (IBAction)StartChatButtonAction:(UIButton *)sender {
@@ -73,7 +100,9 @@ static NSString* const kToken2 = @"";
         pageViewController.vc1 = videoChatController;
         pageViewController.vc2 = leoglkViewController;
         
-        [self presentViewController:pageViewController animated:YES completion:nil];
+        [self presentViewController:pageViewController animated:YES completion:^{
+          NSLog(@"presented video chat view controller");
+        }];
       }
     }];
   }];

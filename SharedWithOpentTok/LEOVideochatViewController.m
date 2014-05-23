@@ -157,6 +157,8 @@ NSString* encodeToPercentEscapeString(NSString *string) {
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+  static size_t count = 0;
+  NSLog(@"%s (%ld)", __PRETTY_FUNCTION__, count++);
     // Dispose of any resources that can be recreated.
 }
 
