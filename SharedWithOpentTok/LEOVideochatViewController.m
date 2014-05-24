@@ -16,6 +16,7 @@ typedef NS_ENUM(NSInteger, LEOVideochatViewControllerAlertViewTag) {
   LEOAlertViewConnectionError,
   LEOAlertViewPublishingError,
   LEOAlertViewSubscribingError,
+  LEOAlertViewLostStream,
   LEOAlertViewCounterPartUserHungup
 };
 
@@ -268,14 +269,22 @@ NSString* encodeToPercentEscapeString(NSString *string) {
 
       // No post alert action for these.
     case LEOAlertViewPublishingError:
-      if (buttonIndex == 1) {
+      if (buttonIndex == 0) {
+        // User pressed "Hang Up".
+        [self doHangup];
+      } else {
+        // User pressed "Try Again"
         [[LEOOpenTokService sharedInstance] manualPublish];
       }
       break;
       
     case LEOAlertViewSubscribingError:
-      if (buttonIndex == 1) {
-        // Try subscribing again.
+    case LEOAlertViewLostStream:
+      if (buttonIndex == 0) {
+        // User pressed "Hang Up".
+        [self doHangup];
+      } else {
+        // User pressed "Try Again".
         [[LEOOpenTokService sharedInstance] manualSubscribe];
       }
       break;
@@ -344,13 +353,21 @@ NSString* encodeToPercentEscapeString(NSString *string) {
   }
 }
 
+- (void)sessionStreamWasDestroyed {
+  NSLog(@"%s", __PRETTY_FUNCTION__);
+  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Subscriber was turned off"
+                                                  message:@"Stream was destroyed"
+                                                 delegate:self
+                                        cancelButtonTitle:@"Keep Trying"
+                                        otherButtonTitles:@"Hang Up", nil];
+  self.alertViewTag = LEOAlertViewLostStream;
+  [alert show];
+}
+
 - (void)sessionConnectionDidFailWithError:(OTError*)error {
   NSLog(@"%s", __PRETTY_FUNCTION__);
-  
   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Video session failed"
-                                                  message:[NSString stringWithFormat:@"%@ \n[session: %@]",
-                                                           [error localizedDescription],
-                                                           [[LEOOpenTokService sharedInstance] session].sessionId]
+                                                  message:[error localizedDescription]
                                                  delegate:self
                                         cancelButtonTitle:@"Keep Trying"
                                         otherButtonTitles:@"Hang Up", nil];
@@ -362,11 +379,11 @@ NSString* encodeToPercentEscapeString(NSString *string) {
   NSLog(@"%s", __PRETTY_FUNCTION__);
   [self updateConnectionPublishStartStopButtons];
   
-  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Message from video session"
-                                                  message:@"There was an error publishing."
+  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Publisher failed"
+                                                  message:[error localizedDescription]
                                                  delegate:self
-                                        cancelButtonTitle:@"Cancel"
-                                        otherButtonTitles:@"Retry", nil];
+                                        cancelButtonTitle:@"Try Again"
+                                        otherButtonTitles:@"Hang Up", nil];
   self.alertViewTag = LEOAlertViewPublishingError;
   [alert show];
 }
@@ -376,13 +393,11 @@ NSString* encodeToPercentEscapeString(NSString *string) {
   // We'll give the option of subscribing again in the alert.
   NSLog(@"%s [Stream: %@, Error: %@ - %@].", __PRETTY_FUNCTION__,[[LEOOpenTokService sharedInstance] subscriber].stream.streamId,
         error, error.localizedDescription);
-  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Message from video session"
-                                                  message:[NSString stringWithFormat:@"%@ \n[stream: %@]",
-                                                           [error localizedDescription],
-                                                           [[LEOOpenTokService sharedInstance] subscriber].stream.streamId]
+  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Subscriber failed"
+                                                  message:[error localizedDescription]
                                                  delegate:self
-                                        cancelButtonTitle:@"Cancel"
-                                        otherButtonTitles:@"Retry", nil];
+                                        cancelButtonTitle:@"Try Again"
+                                        otherButtonTitles:@"Hang Up", nil];
   self.alertViewTag = LEOAlertViewSubscribingError;
   [alert show];
 

@@ -9,7 +9,9 @@
 #import "LEOOpenTokService.h"
 #import <OpenTok/OpenTokObjC.h>
 
-#if 0
+#define ENABLE_LOGGING 1
+
+#if ENABLE_LOGGING
 @interface OpenTokObjC : NSObject
 // Unpublished opentok logging API
 + (void)setLogBlockQueue:(dispatch_queue_t)queue;
@@ -45,9 +47,11 @@
     
     // Only turn this off when testing the service on one device.
     sharedLEOOpenTokService.subscribeToSelf = NO;
-//    
-//    [OpenTokObjC setLogBlock:^(NSString* message, void* arg) {;}];
-//    [OpenTokObjC setLogBlockQueue:dispatch_get_main_queue()];
+    
+#if ENABLE_LOGGING
+    [OpenTokObjC setLogBlock:^(NSString* message, void* arg) {NSLog(@"OpenTok: %@", message);}];
+    [OpenTokObjC setLogBlockQueue:dispatch_get_main_queue()];
+#endif
   });
   
   return sharedLEOOpenTokService;
@@ -393,8 +397,8 @@
     [self.subscriber.view removeFromSuperview];
     self.subscriber = nil;
     
-    if (self.delegate && [self.delegate respondsToSelector:@selector(sessionDidUnsubscribe)]) {
-      [self.delegate sessionDidUnsubscribe];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(sessionStreamWasDestroyed)]) {
+      [self.delegate sessionStreamWasDestroyed];
     }
   }
 }
@@ -490,7 +494,6 @@
 }
 
 - (void)publisher:(OTPublisher*)publisher didFailWithError:(OTError*) error {
-  
   NSLog(@"%s [%@].", __PRETTY_FUNCTION__,error);
   
   // I used to unpublish here but it's actually throwing a exception.
@@ -535,14 +538,15 @@
 
 
 - (void)subscriber:(OTSubscriber*)subscriber didFailWithError:(OTError*)error {
-  
+  NSLog(@"%s [%@].", __PRETTY_FUNCTION__,error);
+ 
   // The subscriber fails, so nil it so we don't have a reference dangling on what is
   // now a dead subscriber.
   [self.subscriber.view removeFromSuperview];
   _subscriber = nil;
   dispatch_async(dispatch_get_main_queue(), ^{
-    if (self.delegate && [self.delegate respondsToSelector:@selector(sessionDidUnsubscribe)]) {
-      [self.delegate sessionDidUnsubscribe];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(sessionSubscribingDidFailWithError:)]) {
+      [self.delegate sessionSubscribingDidFailWithError:error];
     }
   });
 }

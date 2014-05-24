@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Leonardo Software. All rights reserved.
 //
 
-#define USES_OPENTOK_HIGH_LEVEL_API 0
+#define USES_OPENTOK_HIGH_LEVEL_API 1
 
 #import <Foundation/Foundation.h>
 #import <OpenTok/OpenTokObjC.h>
@@ -14,10 +14,10 @@
 #if USES_OPENTOK_HIGH_LEVEL_API
 #import <OpenTok/OTPublisher.h>
 #import <OpenTok/OTSubscriber.h>
-#endif
-
+#else
 #import "TBExampleSubscriber.h"
 #import "TBExamplePublisher.h"
+#endif
 
 @protocol LEOOpenTokServiceDelegate <NSObject>
 @optional
@@ -28,6 +28,7 @@
 - (void)sessionDidSubscribe;
 - (void)sessionDidUnsubscribe;
 - (void)callDidHangUp;
+- (void)sessionStreamWasDestroyed;
 - (void)sessionConnectionDidFailWithError:(OTError*)error;
 - (void)sessionPublishingDidFailWithError:(OTError*)error;
 - (void)sessionSubscribingDidFailWithError:(OTError*)error;
